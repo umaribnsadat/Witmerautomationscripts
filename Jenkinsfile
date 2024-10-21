@@ -9,24 +9,23 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                // Installs dependencies (if any)
-                bat 'pip install -r requirements.txt'
+                // Use the full path to python to install dependencies using pip
+                bat '"C:\\Users\\umarh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install -r requirements.txt'
             }
         }
         stage('Run Automation Script') {
             steps {
-                // Runs your Python automation script
-                bat 'python your_script.py'
+                // Use the full path to python to run the automation script
+                bat '"C:\\Users\\umarh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" your_script.py'
             }
         }
     }
     post {
         success {
-            echo 'Automation script executed successfully!'
+            echo 'Pipeline completed successfully!'
         }
         failure {
             echo 'Script execution failed!'
         }
     }
 }
- 
