@@ -1,0 +1,4 @@
+requests==2.26.0
+numpy==2.1.2
+selenium==4.14.0
+unittest2==1.1.0  # Optional if needed
